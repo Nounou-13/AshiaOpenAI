@@ -298,7 +298,7 @@ export const ProfileSettings: FC<ProfileSettingsProps> = ({}) => {
       <SheetTrigger asChild>
         {profile.image_url ? (
           <Image
-            className="mt-2 size-[34px] cursor-pointer rounded hover:opacity-50"
+            className="mt-2 size-[34px] cursor-pointer rounded-full hover:opacity-50"
             src={profile.image_url + "?" + new Date().getTime()}
             height={34}
             width={34}
@@ -319,7 +319,7 @@ export const ProfileSettings: FC<ProfileSettingsProps> = ({}) => {
         <div className="grow overflow-auto">
           <SheetHeader>
             <SheetTitle className="flex items-center justify-between space-x-2">
-              <div>User Settings</div>
+              <div>Paramètres utilisateur</div>
 
               <Button
                 tabIndex={-1}
@@ -342,7 +342,7 @@ export const ProfileSettings: FC<ProfileSettingsProps> = ({}) => {
             <TabsContent className="mt-4 space-y-4" value="profile">
               <div className="space-y-1">
                 <div className="flex items-center space-x-2">
-                  <Label>Username</Label>
+                  <Label>Nom d&apos;utilisateur</Label>
 
                   <div className="text-xs">
                     {username !== profile.username ? (
@@ -388,7 +388,7 @@ export const ProfileSettings: FC<ProfileSettingsProps> = ({}) => {
               </div>
 
               <div className="space-y-1">
-                <Label>Profile Image</Label>
+                <Label>Image de profil</Label>
 
                 <ImagePicker
                   src={profileImageSrc}
@@ -401,10 +401,10 @@ export const ProfileSettings: FC<ProfileSettingsProps> = ({}) => {
               </div>
 
               <div className="space-y-1">
-                <Label>Chat Display Name</Label>
+                <Label>Nom d&apos;affichage du chat</Label>
 
                 <Input
-                  placeholder="Chat display name..."
+                  placeholder="Nom d'affichage du chat..."
                   value={displayName}
                   onChange={e => setDisplayName(e.target.value)}
                   maxLength={PROFILE_DISPLAY_NAME_MAX}
@@ -413,8 +413,8 @@ export const ProfileSettings: FC<ProfileSettingsProps> = ({}) => {
 
               <div className="space-y-1">
                 <Label className="text-sm">
-                  What would you like the AI to know about you to provide better
-                  responses?
+                  Que souhaiteriez-vous que Assistant IA sache sur vous pour
+                  fournir de meilleures réponses ?
                 </Label>
 
                 <TextareaAutosize

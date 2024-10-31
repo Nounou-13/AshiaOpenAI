@@ -161,9 +161,9 @@ export default function SetupPage() {
       case 1:
         return (
           <StepContainer
-            stepDescription="Let's create your profile."
+            stepDescription="Créons votre profil."
             stepNum={currentStep}
-            stepTitle="Welcome to Chatbot UI"
+            stepTitle="Bienvenue dans l'interface utilisateur de l'Assistant ASHIA"
             onShouldProceed={handleShouldProceed}
             showNextButton={!!(username && usernameAvailable)}
             showBackButton={false}
@@ -229,9 +229,9 @@ export default function SetupPage() {
       case 3:
         return (
           <StepContainer
-            stepDescription="You are all set up!"
+            stepDescription="Vous êtes tous prêts !"
             stepNum={currentStep}
-            stepTitle="Setup Complete"
+            stepTitle="Configuration terminée"
             onShouldProceed={handleShouldProceed}
             showNextButton={true}
             showBackButton={true}
